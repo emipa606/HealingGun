@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Healing_Gun</defName>
+    <label>Healing Gun</label>
+    <description>A Gun constructed for healing. \nUsed by the armies on the battlefield</description>
+    <graphicData>
+      <texPath>HealingGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <soundInteract>Interact_Autopistol</soundInteract> -->
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <MarketValue>5000</MarketValue>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+      <Mass>1</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>HealingGunResearch</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Gun_SniperRifle>2</Gun_SniperRifle>
+      <Steel>100</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Heal</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>100</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>20</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Heal</defName>
+    <label>healing bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>HealGunHeal</damageDef>
+      <speed>55</speed>
+      <damageAmountBase>1</damageAmountBase>
+    </projectile>
+  </ThingDef>
+</Defs>

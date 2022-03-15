@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Healing Gun</name>
+  <author>erdelf</author>
+  <url>
+  </url>
+  <targetVersion>0.19.0</targetVersion>
+  <description>This mod introduces a new Healing Gun to the Game. \nAfter beeing developed in a collaboration between famous medical scientist Angela Ziegler and weapon developer Torbjörn Lindholm this weapon got famous through the use by the sharpshooter Ana Amari. Alltough the original gun got destroyed in a war, parts of the plans were recovered. \nThis weapon is complicated and requires a lot of work and materials.. but it provides instant healing during fights. \nThe plans of the weapons have to be researched in order to use it. \n \nThe healing is locked at six injuries per shot and two injuries per bodyparts. Scars and old wounds won't be healed by this gun. \nThis gun also can't regrow parts of the body or help with diseases. It is purely made to tend to injuries during battle.
+   </description>
+</ModMetaData>
