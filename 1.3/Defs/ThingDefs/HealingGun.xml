@@ -35,7 +35,7 @@
         <defaultProjectile>Bullet_Heal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <range>100</range>
-        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCast>Shot_HealingGun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>20</muzzleFlashScale>
       </li>
