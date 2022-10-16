@@ -24,8 +24,8 @@ public class DamageWorker_Heal : DamageWorker
             }
 
             var currentHeals = 2;
-            foreach (var item in from injury in pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
-                     where injury.Part == rec
+            foreach (var item in from injury in pawn.health.hediffSet.hediffs
+                     where injury is Hediff_Injury && injury.Part == rec
                      select injury)
             {
                 if (currentHeals <= 0)
@@ -33,7 +33,7 @@ public class DamageWorker_Heal : DamageWorker
                     break;
                 }
 
-                if (!item.CanHealNaturally() || item.IsPermanent())
+                if (item is Hediff_Injury injury && !injury.CanHealNaturally() || item.IsPermanent())
                 {
                     //Log.Message("Scars or old wounds can't be healed");
                     continue;

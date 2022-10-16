@@ -20,8 +20,8 @@ public static class AttackTargetFinder_BestAttackTarget
 
         IEnumerable<Pawn> enumerable = pawn.Map.mapPawns.AllPawnsSpawned.Where(p =>
             !p.Dead && !p.Faction.HostileTo(pawn.Faction) && p != pawn &&
-            GenSight.LineOfSight(pawn.Position, p.Position, pawn.Map) && p.health.hediffSet
-                .GetHediffs<Hediff_Injury>().Any(h => h.CanHealNaturally() && !h.IsPermanent())).ToArray();
+            GenSight.LineOfSight(pawn.Position, p.Position, pawn.Map) && p.health.hediffSet.hediffs.Any(h =>
+                h is Hediff_Injury injury && injury.CanHealNaturally() && !h.IsPermanent())).ToArray();
         var thing =
             GenClosest.ClosestThing_Global(pawn.Position,
                 enumerable.Where(p => p.RaceProps.Humanlike && p.Faction == pawn.Faction), maxDist) ??
