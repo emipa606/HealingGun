@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Gun heal -->
+  <HealGunHeal.label>Gun heal</HealGunHeal.label>
+  <!-- EN: {0} has been killed. -->
+  <HealGunHeal.deathMessage>{0} has been killed.</HealGunHeal.deathMessage>
+</LanguageData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: healing bullet -->
+  <Bullet_Heal.label>healing bullet</Bullet_Heal.label>
+  <!-- EN: Healing Gun -->
+  <Healing_Gun.label>Healing Gun</Healing_Gun.label>
+  <!-- EN: A Gun constructed for healing. \nUsed by the armies on the battlefield -->
+  <Healing_Gun.description>A Gun constructed for healing. 
+Used by the armies on the battlefield</Healing_Gun.description>
+  <!-- EN: Healing Gun -->
+  <Healing_Gun.verbs.Verb_Shoot.label>Healing Gun</Healing_Gun.verbs.Verb_Shoot.label>
+</LanguageData>

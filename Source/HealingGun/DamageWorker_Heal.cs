@@ -13,8 +13,6 @@ public class DamageWorker_Heal : DamageWorker
             return new DamageResult();
         }
 
-        //Log.Message($"Starting healing on {pawn.Name.ToStringShort}");
-        //Log.Message($"Injury Count: {pawn.health.hediffSet.GetHediffs<Hediff_Injury>().Count()}");
         var totalHeals = 6;
         foreach (var rec in pawn.health.hediffSet.GetInjuredParts())
         {
@@ -35,18 +33,14 @@ public class DamageWorker_Heal : DamageWorker
 
                 if (item is Hediff_Injury injury && !injury.CanHealNaturally() || item.IsPermanent())
                 {
-                    //Log.Message("Scars or old wounds can't be healed");
                     continue;
                 }
 
-                //Log.Message($"Healing {item.def.defName} on {item.Part.def.defName}");
                 item.Heal((int)item.Severity + 1);
                 totalHeals--;
                 currentHeals--;
             }
         }
-
-        //Log.Message($"Finished healing on {pawn.Name.ToStringShort}");
 
         return new DamageResult();
     }
